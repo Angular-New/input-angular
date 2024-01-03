@@ -1,4 +1,5 @@
 import {
+  Attribute,
   booleanAttribute,
   ChangeDetectionStrategy,
   Component,
@@ -16,6 +17,8 @@ import { ICourse } from '../../types';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PrimoComponent {
+  constructor(@Attribute('year') public year: string) {}
+
   @Input({
     required: true, // При желании мы можем пометить Input как необходимый
     alias: 'primo-title', // можно определить псевдоним с помощью объекта конфигурации
