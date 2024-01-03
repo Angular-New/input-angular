@@ -1,1 +1,9 @@
 <h3>{{ title }}</h3>
+<hr />
+<ul>
+  @for(course of courses; track course) {
+    <li>{{ course.title }}: {{ course.price }}</li>
+  }
+</ul>
+<hr />
+<p>{{ description }}</p>
