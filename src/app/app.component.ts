@@ -20,4 +20,5 @@ export class AppComponent {
     { title: 'course 3', price: 14, description: 'course 3' },
   ];
   public readonly description: string = 'primo description';
+  public readonly status: boolean = true;
 }

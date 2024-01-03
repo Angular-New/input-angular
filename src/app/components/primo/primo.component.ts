@@ -1,4 +1,9 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import {
+  booleanAttribute,
+  ChangeDetectionStrategy,
+  Component,
+  Input,
+} from '@angular/core';
 import { ICourse } from '../../types';
 
 @Component({
@@ -22,6 +27,11 @@ export class PrimoComponent {
     transform: (value: string) => value.toLocaleUpperCase(), // при этом входном преобразовании любая строка, переданная на вход имени, будет мгновенно преобразована в верхний регистр
   })
   public description!: string;
+
+  @Input({
+    transform: booleanAttribute,
+  })
+  public status: boolean = false;
 
   private _courses!: ICourse[];
 

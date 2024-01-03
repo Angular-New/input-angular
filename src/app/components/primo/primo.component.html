@@ -5,5 +5,9 @@
     <li>{{ course.title }}: {{ course.price }}</li>
   }
 </ul>
+<button
+  [disabled]="status"
+  type="submit"
+>submit</button>
 <hr />
 <p>{{ description }}</p>
