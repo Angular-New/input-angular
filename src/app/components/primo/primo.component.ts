@@ -3,6 +3,7 @@ import {
   ChangeDetectionStrategy,
   Component,
   Input,
+  numberAttribute,
 } from '@angular/core';
 import { ICourse } from '../../types';
 
@@ -32,6 +33,11 @@ export class PrimoComponent {
     transform: booleanAttribute,
   })
   public status: boolean = false;
+
+  @Input({
+    transform: numberAttribute,
+  })
+  public quantity!: number;
 
   private _courses!: ICourse[];
 
